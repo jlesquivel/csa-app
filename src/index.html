@@ -1,14 +1,55 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Prof</title>
-  <base href="/">
+  <base href="/prof/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/prof/favicon.ico">
+  <link rel="manifest" href="/prof/manifest.json">
+  <meta name="theme-color" content="#1976d2">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-starturl" content="/prof/">
+  <meta name="Description" content="Sistema de Profesores Colegio Santa Ana">
+
+  <style>
+      #skip a {  position:absolute;  left:-10000px;  top:auto;  width:1px;  height:1px;  overflow:hidden;  }
+      #skip a:focus {  position:static;  width:auto;  height:auto;  }
+
+      .app-loader {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+  }
+
+    </style>
 </head>
 <body>
-  <app-root></app-root>
+
+    <div id="skip"><a href="#content">skip to navigation</a></div>
+
+    <app-root> </app-root>
+
+    <div class="app-loader" id="content">
+      <img class="logo" src="/prof/ssets/img/launcher-icon-4x.png"  style="max-width:100%" alt="Logo">
+
+      <noscript>
+        <h4 >
+          Sorry, JavaScript debe esta activo para ejecutar la aplicación.
+        </h4>
+      </noscript>
+    </div>
+
+
 </body>
 </html>
