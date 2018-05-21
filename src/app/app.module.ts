@@ -43,7 +43,7 @@ import { NotasRegistraComponent } from './notas/notas-registra/notas-registra.co
 
   imports: [
     BrowserModule,
-    ServiceWorkerModule.register('./ngsw-worker.js',{ enabled: environment.production }),
+    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production }),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,   // actualizado

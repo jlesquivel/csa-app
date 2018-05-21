@@ -8,6 +8,8 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 RewriteRule ^ index.html
 
+ErrorDocument 404 /index.html
+
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|webp)$">
 Header set Cache-Control "max-age=604800, public"
 </FilesMatch>
