@@ -39,8 +39,6 @@ import { NotasRegistraComponent } from './notas/notas-registra/notas-registra.co
     InfoEstudComponent,
     HorariosComponent,
     NotasRegistraComponent
-
-
   ],
 
   imports: [
