@@ -48,7 +48,9 @@ const appRoutes: Routes = [
   { path: 'horarios', component: HorariosComponent, canActivate: [AuthGuard] },
 
   { path: '', component: ListaClaseComponent, canActivate: [AuthGuard] },
-  { path: '**', redirectTo: '/' }
+  { path: '**', redirectTo: '/login' }
+
+
 ];
 
 @NgModule({

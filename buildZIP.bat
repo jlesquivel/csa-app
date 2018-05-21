@@ -1,3 +1,3 @@
 
-del *.zip
-winrar a -afzip -ag -ep1 -r  "prof " "dist\"
+del dist\*.zip
+winrar a -afzip -ag -ep1 -r  "dist\prof " "dist\prof\"

@@ -1,13 +1,15 @@
 <div class="body-cover"></div>
+
+
 <div *ngIf="visibleMenu" class="navbar-fixed">
   <nav class="nav-extended blue darken-2" role="navigation">
     <div class="nav-wrapper">
-      
-        <!--encabezado-->  
+
+        <!--encabezado-->
         <a class="brand-logo">Santa Ana</a>
 
         <!--Boton Menu lateral que se oculta-->
-        <a materialize="sideNav" data-activates="mobile-demo" 
+        <a materialize="sideNav" data-activates="mobile-demo"
         class="button-collapse" [materializeParams]="[{closeOnClick: true}]" >
         <i class="material-icons">menu</i>  </a>
 
@@ -18,8 +20,8 @@
           <li><a [routerLink]="['/notas']">Notas</a></li>
           <!--<li><a  [routerLink]="['/listaClase']">Mobile</a></li>-->
         </ul>
-        
-        <!--tabs en la parte superior-->        
+
+        <!--tabs en la parte superior-->
         <ul class="tabs tabs-transparent hide-on-large-only" >
           <li class="tab col s3 "><a [routerLink]="['/listaClase']">Asistencia</a></li>
           <li class="tab col s3 "><a [routerLink]="['/listaControl']">Listas</a></li>
