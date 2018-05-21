@@ -47,9 +47,11 @@ const appRoutes: Routes = [
   },
   { path: 'horarios', component: HorariosComponent, canActivate: [AuthGuard] },
 
-  { path: '', component: ListaClaseComponent, canActivate: [AuthGuard] },
-  { path: '**', redirectTo: '/login' }
+  // pagina inicial
+  { path: '',  component: ListaClaseComponent,  canActivate: [AuthGuard] },
 
+  // Pagina no encontrada
+  {  path: '**',  component: LoginComponent  }
 
 ];
 
