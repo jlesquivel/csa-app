@@ -16,7 +16,7 @@
     {
 			"text": "☯ Ejecutar",
 			"tooltip": "Ejecutar",
-			"color": "orange",
+			"color": "cyan",
 			"command": "npm run start",
 			"alignment": "left",
 			"skipTerminateQuickPick": false,
