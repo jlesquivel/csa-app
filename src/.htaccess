@@ -1,15 +1,24 @@
-RewriteEngine On
+# RewriteEngine On
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+<IfModule mod_rewrite.c>
+    RewriteEngine on
 
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-RewriteRule ^ index.html
+    # Don't rewrite files or directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
 
-ErrorDocument 404 /index.html
+    # Rewrite everything else to index.html
+    # to allow html5 state links
+    RewriteRule ^ https://%{HTTP_HOST}/index.html [L]
+</IfModule>
 
-<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|webp)$">
-Header set Cache-Control "max-age=604800, public"
+ErrorDocument 404 /
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|webp|woff2)$">
+  Header set Cache-Control "max-age=2628000, public"
 </FilesMatch>
+
+

@@ -51,7 +51,8 @@ const appRoutes: Routes = [
   { path: '',  component: ListaClaseComponent,  canActivate: [AuthGuard] },
 
   // Pagina no encontrada
-  {  path: '**',  component: LoginComponent  }
+  { path: '**',  component: ListaClaseComponent,  canActivate: [AuthGuard] },
+  // {  path: '**',  component: LoginComponent  }
 
 ];
 
