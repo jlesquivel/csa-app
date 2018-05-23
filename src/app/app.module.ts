@@ -54,5 +54,6 @@ import { NotasRegistraComponent } from './notas/notas-registra/notas-registra.co
   providers: [AuthGuard, AuthenticationService],
 
   bootstrap: [AppComponent]
+
 })
 export class AppModule {}
