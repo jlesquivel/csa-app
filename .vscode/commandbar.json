@@ -1,0 +1,27 @@
+{
+	"skipTerminateQuickPick": true,
+	"skipSwitchToOutput": false,
+	"skipErrorMessage": true,
+	"commands": [
+		{
+			"text": "☯ Build",
+			"tooltip": "Build",
+			"color": "yellow",
+			"command": "npm run build",
+			"alignment": "left",
+			"skipTerminateQuickPick": false,
+			"priority": 0
+    },
+
+    {
+			"text": "☯ Ejecutar",
+			"tooltip": "Ejecutar",
+			"color": "orange",
+			"command": "npm run start",
+			"alignment": "left",
+			"skipTerminateQuickPick": false,
+			"priority": 0
+		}
+
+	]
+}
