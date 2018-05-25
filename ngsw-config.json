@@ -6,6 +6,7 @@
     "resources": {
       "files": [
         "/favicon.ico",
+        "/manifest.json",
         "/index.html",
         "/*.css",
         "/*.js",
@@ -31,8 +32,7 @@
       "name": "api-performance",
       "urls": [
         "/",
-        "/login",
-        "/listaClase"
+        "/login"
       ],
       "cacheConfig": {
         "strategy": "performance",

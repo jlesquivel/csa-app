@@ -13,26 +13,29 @@
         class="button-collapse" [materializeParams]="[{closeOnClick: true}]" >
         <i class="material-icons">menu</i>  </a>
 
+          <!-- navbar nenu -->
         <ul id="nav-mobile" class="right hide-on-med-and-down ">
-          <li><a [routerLink]="['/listaClase']">Lista Clase</a></li>
-          <li><a [routerLink]="['/listaControl']">Lista Control</a></li>
-          <li><a [routerLink]="['/boleta']">Boleta</a></li>
-          <li><a [routerLink]="['/notas']">Notas</a></li>
-          <!--<li><a  [routerLink]="['/listaClase']">Mobile</a></li>-->
+            <li><a [routerLink]="['/comunicados']">Comunicados</a></li>
+            <li><a [routerLink]="['/listaClase']">Asistencia</a></li>
+            <li><a [routerLink]="['/notas']">Grupos</a></li>
+            <li>
+                <a materialize="sideNav" data-activates="mobile-demo2"
+                [materializeParams]="[{closeOnClick: true, edge: 'right'}]"
+                class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </li>
         </ul>
 
         <!--tabs en la parte superior-->
-        <ul class="tabs tabs-transparent hide-on-large-only" >
-          <li class="tab col s3 "><a [routerLink]="['/listaClase']">Asistencia</a></li>
-          <li class="tab col s3 "><a [routerLink]="['/listaControl']">Listas</a></li>
-          <li class="tab col s3 "><a [routerLink]="['/boleta']">Boleta</a></li>
-          <li class="tab col s3 "><a [routerLink]="['/notas']">Notas</a></li>
+        <ul class="tabs tabs-transparent hide-on-large-only" materialize="tabs">
+          <li class="tab col s4 "><a [routerLink]="['/comunicados']">Comunicados</a></li>
+          <li class="tab col s4 "><a [routerLink]="['/listaClase']">Asistencia</a></li>
+          <li class="tab col s4 "><a [routerLink]="['/notas']">Grupos</a></li>
         </ul>
     </div>
   </nav>
 </div>
 
-<!--Menu lateral  para tablet -->
+<!--Menu lateral  para tablet      encabezado-->
 <ul class="side-nav" id="mobile-demo" >
   <li>
     <div class="userView">
@@ -45,21 +48,37 @@
     </div>
   </li>
 
-
-  <li>
-    <a [routerLink]="['/infoEstud']"><i class="material-icons">list</i> Info estudiante</a>
-  </li>
-  <li>
-    <a [routerLink]="['/horarios']"><i class="material-icons">av_timer</i>Horarios</a>
-  </li>
-  <li>
-    <a [routerLink]="['/boleta']"><i class="material-icons">vpn_key</i>Cambiar clave</a>
-  </li>
-  <li>
-    <a (click)="salir()"><i class="material-icons">power_settings_new</i>Salir</a>
-  </li>
+  <!-- menu lateral  sidenav -->
+  <li> <a [routerLink]="['/boleta']"><i class="material-icons">list</i> Boletas</a>   </li>
+  <li> <a [routerLink]="['/infoEstud']"><i class="material-icons">list</i> Info estudiante</a>   </li>
+  <li> <a [routerLink]="['/horarios']"><i class="material-icons">av_timer</i>Horarios</a>  </li>
+  <li> <a [routerLink]="['/boleta']"><i class="material-icons">vpn_key</i>Cambiar clave</a> </li>
+  <li> <a (click)="salir()"><i class="material-icons">power_settings_new</i>Salir</a> </li>
   <!--<li><a ><i class="material-icons">input</i>Mobile</a></li>-->
-</ul>
+  </ul>
+
+
+
+  <ul class="side-nav" id="mobile-demo2" >
+      <!-- <li>
+        <div class="userView">
+          <div class="background">
+            <img class="responsive-img" src="assets/img/side-nav2.webp" alt="Side Nav">
+          </div>
+          <a><img class="circle" src="assets/img/cara.png" alt="Avatar"></a>
+          <a><span class="white-text name">{{usuario | uppercase }}</span></a>
+          <a><span class="white-text email">{{correo}}</span></a>
+        </div>
+      </li> -->
+
+      <!-- menu lateral  sidenav -->
+      <li> <a [routerLink]="['/infoEstud']"><i class="material-icons">list</i> Boletas</a>   </li>
+      <li> <a [routerLink]="['/infoEstud']"><i class="material-icons">list</i> Info estudiante</a>   </li>
+      <li> <a [routerLink]="['/horarios']"><i class="material-icons">av_timer</i>Horarios</a>  </li>
+      <li> <a [routerLink]="['/boleta']"><i class="material-icons">vpn_key</i>Cambiar clave</a> </li>
+      <li> <a (click)="salir()"><i class="material-icons">power_settings_new</i>Salir</a> </li>
+      <!--<li><a ><i class="material-icons">input</i>Mobile</a></li>-->
+      </ul>
 
 <router-outlet></router-outlet>
 

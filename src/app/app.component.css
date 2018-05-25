@@ -1,6 +1,8 @@
+
+
 .navbar-fixed {
    height: 110px;
-   min-height: 115px;
+   /* min-height: 115px; */
 }
 
 .side-nav {
@@ -11,12 +13,12 @@
   font-size: 1.5em;
 }
 
-.body-cover {
+/* .body-cover {
   width: 100%;
   z-index: 0;
   position: fixed;
   height: 100%;
-}
+} */
 
 
 

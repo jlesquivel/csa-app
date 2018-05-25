@@ -23,6 +23,7 @@ import { ListaCtrlComponent } from './lst-ctrl/listaCtrl/listaCtrl.component';
 import { InfoEstudComponent } from './info-estud/info-estud.component';
 import { HorariosComponent } from './horarios/horarios.component';
 import { NotasRegistraComponent } from './notas/notas-registra/notas-registra.component';
+import { ComunicadosComponent } from './comunicados/comunicados.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { NotasRegistraComponent } from './notas/notas-registra/notas-registra.co
     ListaCtrlComponent,
     InfoEstudComponent,
     HorariosComponent,
-    NotasRegistraComponent
+    NotasRegistraComponent,
+    ComunicadosComponent
   ],
 
   imports: [
@@ -54,5 +56,6 @@ import { NotasRegistraComponent } from './notas/notas-registra/notas-registra.co
   providers: [AuthGuard, AuthenticationService],
 
   bootstrap: [AppComponent]
+
 })
 export class AppModule {}

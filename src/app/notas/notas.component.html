@@ -11,23 +11,24 @@
       <img src="" alt="" class="circle">
       <i class=" material-icons circle ">list</i>
       <span class="title">{{ item.nombre | uppercase}} </span>
-      <p>Grupo :   {{item.nivel}} - {{item.grupo }}    <br>
+      <p>Grupo :   {{item.nivel}} - {{item.grupo }}
+        <br>
         Estado :  {{item.estado}}
       </p>
       <a class="secondary-content" (click)="ListaCtr(item)">
-        <i class="material-icons ">mode_edit</i>
+        <i class="material-icons medium">chevron_right</i>
       </a>
     </a>
   </ul>
 
 
   <!-- Modal Structure -->
-  <div id="modal1" class="modal modal-fixed-footer" materialize="modal" 
+  <div id="modal1" class="modal modal-fixed-footer" materialize="modal"
   [materializeParams]="[{dismissible: false, endingTop:'5%'}]" [materializeActions]="modalActions">
     <div class="modal-content">
 
       <!--Formulario -->
-      <form novalidate (ngSubmit)="f.form.valid && onSubmit()" 
+      <form novalidate (ngSubmit)="f.form.valid && onSubmit()"
           #f="ngForm" class="col s12" name="registration">
 
           <div class="row">
@@ -42,16 +43,16 @@
             </div>
 
             <div class="row">
-        <button class="btn-large waves-effect waves-light" 
+        <button class="btn-large waves-effect waves-light"
             type="submit" name="action">Cargar Notas
         </button>
 
         <p></p>
         <p><br></p>
-        <button class="btn-large waves-effect waves-light" 
+        <button class="btn-large waves-effect waves-light"
             type="submit" name="action">Archivo Excel
         </button>
-  
+
         <p></p>
         <div class="row">
           El archivo excel se envía al correo electrónico registrado

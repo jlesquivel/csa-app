@@ -2,6 +2,7 @@
 
 @font-face {
   font-family: "untitled-font-2";
+  font-display:swap;
   src: url("fonts/untitled-font-2.eot");
   src: url("fonts/untitled-font-2.eot?#iefix") format("embedded-opentype"),
     url("fonts/untitled-font-2.woff") format("woff"),
@@ -13,6 +14,7 @@
 
 [data-icon]:before {
   font-family: "untitled-font-2", serif;
+  font-display: swap;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;

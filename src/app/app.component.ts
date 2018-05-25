@@ -4,6 +4,8 @@ import { AuthGuard } from './_guards/auth.guard';
 import { JwtHelper, tokenNotExpired } from 'angular2-jwt';
 import { Router } from '@angular/router';
 
+import { MaterializeAction } from 'angular2-materialize';
+
 declare var alasql: any;
 
 @Component({
@@ -23,9 +25,13 @@ export class AppComponent implements OnInit {
     alasql.options.errorlog = true;
     // alasql.promise('ATTACH INDEXEDDB DATABASE prof; DROP INDEXEDDB DATABASE prof');
 
+
+    var x = document.getElementById("cargar");
+    x.style.display = "none";
   }
 
   ngOnInit() {
+
 
     alasql.promise(
       '  \
@@ -62,4 +68,6 @@ export class AppComponent implements OnInit {
     localStorage.removeItem('currentUser');
     this.router.navigate(['/login']).then(() => {});
   }
+
+
 }
