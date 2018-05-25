@@ -15,6 +15,7 @@ import { ListaCtrlComponent } from './lst-ctrl/listaCtrl/listaCtrl.component';
 import { InfoEstudComponent } from './info-estud/info-estud.component';
 import { HorariosComponent } from './horarios/horarios.component';
 import { NotasRegistraComponent } from './notas/notas-registra/notas-registra.component';
+import { ComunicadosComponent } from './comunicados/comunicados.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -45,13 +46,20 @@ const appRoutes: Routes = [
     component: InfoEstudComponent,
     canActivate: [AuthGuard]
   },
+
+  {
+    path: 'comunicados',
+    component: ComunicadosComponent,
+    canActivate: [AuthGuard]
+  },
+
   { path: 'horarios', component: HorariosComponent, canActivate: [AuthGuard] },
 
   // pagina inicial
-  { path: '',  component: ListaClaseComponent,  canActivate: [AuthGuard] },
+  { path: '',  component: ComunicadosComponent,  canActivate: [AuthGuard] },
 
   // Pagina no encontrada
-  { path: '**',  component: ListaClaseComponent,  canActivate: [AuthGuard] },
+  { path: '**',  component: ComunicadosComponent,  canActivate: [AuthGuard] },
   // {  path: '**',  component: LoginComponent  }
 
 ];

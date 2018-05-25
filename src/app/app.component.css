@@ -1,18 +1,8 @@
 
 
-header, main, footer {
-  padding-left: 300px;
-}
-
-@media only screen and (max-width : 992px) {
-  header, main, footer {
-    padding-left: 0;
-  }
-}
-
 .navbar-fixed {
    height: 110px;
-   min-height: 115px;
+   /* min-height: 115px; */
 }
 
 .side-nav {
@@ -23,12 +13,12 @@ header, main, footer {
   font-size: 1.5em;
 }
 
-.body-cover {
+/* .body-cover {
   width: 100%;
   z-index: 0;
   position: fixed;
   height: 100%;
-}
+} */
 
 
 

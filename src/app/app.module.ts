@@ -23,7 +23,6 @@ import { ListaCtrlComponent } from './lst-ctrl/listaCtrl/listaCtrl.component';
 import { InfoEstudComponent } from './info-estud/info-estud.component';
 import { HorariosComponent } from './horarios/horarios.component';
 import { NotasRegistraComponent } from './notas/notas-registra/notas-registra.component';
-import { ComunicadosComponent } from './app/comunicados/comunicados.component';
 import { ComunicadosComponent } from './comunicados/comunicados.component';
 
 
@@ -40,9 +39,8 @@ import { ComunicadosComponent } from './comunicados/comunicados.component';
     ListaCtrlComponent,
     InfoEstudComponent,
     HorariosComponent,
-    NotasRegistraComponen,
-    ComunicadosComponent,
-    ComunicadosComponentt
+    NotasRegistraComponent,
+    ComunicadosComponent
   ],
 
   imports: [

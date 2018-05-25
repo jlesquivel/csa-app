@@ -4,6 +4,8 @@ import { AuthGuard } from './_guards/auth.guard';
 import { JwtHelper, tokenNotExpired } from 'angular2-jwt';
 import { Router } from '@angular/router';
 
+import { MaterializeAction } from 'angular2-materialize';
+
 declare var alasql: any;
 
 @Component({

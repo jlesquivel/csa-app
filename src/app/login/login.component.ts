@@ -23,7 +23,7 @@ export class LoginComponent implements AfterViewChecked {
 
   constructor(
     private authenticationService: AuthenticationService,
-    private router: Router    
+    private router: Router
   ) {
     // console.log('constructor LoginComponent');
     this.crearControles();
@@ -41,25 +41,25 @@ export class LoginComponent implements AfterViewChecked {
   }
 
   login() {
-    if (localStorage.getItem('currentUser')) {   
-          this.router.navigate(['/listaClase']).then(() => {});
+    if (localStorage.getItem('currentUser')) {
+          this.router.navigate(['/comunicados']).then(() => {});
     } else {
       this.authenticationService
         .login(this.usuario.email, this.usuario.password)
         .subscribe(
           (response) => {
-            
+
             if (localStorage.getItem('currentUser')) {
-              this.token = localStorage.getItem('currentUser'); 
-              this.router.navigate(['/listaClase']).then(() => {});
+              this.token = localStorage.getItem('currentUser');
+              this.router.navigate(['/comunicados']).then(() => {});
             }
 
             let user : any = response;
             // console.log(user.success);
-    
-            if (user.success) {          
-              localStorage.setItem('currentUser', JSON.stringify(user));          
-            } else {          
+
+            if (user.success) {
+              localStorage.setItem('currentUser', JSON.stringify(user));
+            } else {
               toast(user['message'], 5000, 'rounded', 'top');
               localStorage.removeItem('currentUser');
             }
@@ -69,7 +69,7 @@ export class LoginComponent implements AfterViewChecked {
              console.log(error);
             //toast(error.json().estado, 15000, 'rounded');
           },
-          
+
         );
     }
   }

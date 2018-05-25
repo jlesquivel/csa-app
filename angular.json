@@ -22,6 +22,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/manifest.json",
+              "src/robots.txt",
               "src/.htaccess",
               "src/.well-known"
             ],
