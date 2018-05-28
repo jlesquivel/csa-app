@@ -1,16 +1,17 @@
 {
   "index": "/index.html",
+
   "assetGroups": [{
-    "name": "prof",
+    "name": "Profesor",
     "installMode": "prefetch",
     "resources": {
       "files": [
         "/favicon.ico",
         "/manifest.json",
-        "/robots.txt",
         "/index.html",
         "/*.css",
         "/*.js",
+        "/robots.txt",
         "/*.woff2"
       ],
       "urls": [
@@ -28,12 +29,13 @@
       ]
     }
   }]  ,
+
+
   "dataGroups": [
     {
       "name": "api-performance",
       "urls": [
-        "/",
-        "/login"
+        "/comunicados"
       ],
       "cacheConfig": {
         "strategy": "performance",

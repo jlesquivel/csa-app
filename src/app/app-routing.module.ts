@@ -58,6 +58,7 @@ const appRoutes: Routes = [
   // pagina inicial
   { path: '',  component: ComunicadosComponent,  canActivate: [AuthGuard] },
 
+
   // Pagina no encontrada
   { path: '**',  component: ComunicadosComponent,  canActivate: [AuthGuard] },
   // {  path: '**',  component: LoginComponent  }
@@ -65,7 +66,9 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule]
+  // imports: [ RouterModule.forRoot(appRoutes, { useHash: true }) ],
+  imports: [ RouterModule.forRoot(appRoutes)],
+
+  exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
